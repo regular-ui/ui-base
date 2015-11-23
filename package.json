@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "author": "Sensen <rainforest92@126.com>",
   "main": "./index.js",
-  "repository": "regular-ui/regular-ui-base",
+  "repository": "regular-ui/ui-base",
   "homepage": "http://regular-ui.github.io",
   "bugs": {
-    "url": "http://github.com/regular-ui/regular-ui-base/issues"
+    "url": "http://github.com/regular-ui/ui-base/issues"
   },
   "license": "MIT",
   "keywords": [

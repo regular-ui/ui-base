@@ -1,2 +1,2 @@
 # regular-ui-base
-Base JS Files of Regular UI
+Base Component of Regular UI
