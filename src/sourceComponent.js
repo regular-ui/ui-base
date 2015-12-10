@@ -13,6 +13,7 @@ var _ = require('./_.js');
 /**
  * @class SourceComponent
  * @extend Component
+ * @deprecated
  * @param {object[]=[]}             options.data.source              =  数据源
  * @param {boolean=true}            options.data.updateAuto          => 当有service时，是否自动加载
  * @param {boolean=false}           options.data.readonly            => 是否只读

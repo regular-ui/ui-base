@@ -31,7 +31,7 @@ var Component = Regular.extend({
             disabled: false,
             visible: true,
             'class': '',
-            console: console
+            console: typeof console === 'undefined' ? undefined : console
         });
         this.supr();
     },
