@@ -2,32 +2,22 @@
 
 var _ = require('./_.js');
 
-exports['z-crt'] = function(elem, value) {
-    if(typeof value === 'object' && value.type == 'expression')
-        this.$watch(value, function(newValue, oldValue) {
-            _.dom[newValue ? 'addClass' : 'delClass'](elem, 'z-crt');
-        });
-    else if(!!value || value === '')
-        _.dom.addClass(elem, 'z-crt');
+var rClassGenerator = function(rClass) {
+    exports[rClass] = function(elem, value) {
+        if(typeof value === 'object' && value.type == 'expression')
+            this.$watch(value, function(newValue, oldValue) {
+                _.dom[newValue ? 'addClass' : 'delClass'](elem, rClass);
+            });
+        else if(!!value || value === '')
+            _.dom.addClass(elem, rClass);
+    }
 }
 
-exports['z-sel'] = function(elem, value) {
-    if(typeof value === 'object' && value.type == 'expression')
-        this.$watch(value, function(newValue, oldValue) {
-            _.dom[newValue ? 'addClass' : 'delClass'](elem, 'z-sel');
-        });
-    else if(!!value || value === '')
-        _.dom.addClass(elem, 'z-sel');
-}
-
-exports['z-dis'] = function(elem, value) {
-    if(typeof value === 'object' && value.type == 'expression')
-        this.$watch(value, function(newValue, oldValue) {
-            _.dom[newValue ? 'addClass' : 'delClass'](elem, 'z-dis');
-        });
-    else if(!!value || value === '')
-        _.dom.addClass(elem, 'z-dis');
-}
+rClassGenerator('z-crt');
+rClassGenerator('z-sel');
+rClassGenerator('z-chk');
+rClassGenerator('z-dis');
+rClassGenerator('z-divider');
 
 exports['r-show'] = function(elem, value) {
     if(typeof value === 'object' && value.type == 'expression')

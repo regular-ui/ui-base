@@ -1,5 +1,6 @@
 var compatibility = {};
 
+compatibility.isIE = navigator.appName === 'Microsoft Internet Explorer';
 compatibility.isIE8 = navigator.appName === 'Microsoft Internet Explorer' && navigator.appVersion.indexOf('MSIE 8.0') >= 0;
 
 if (!Object.keys) {

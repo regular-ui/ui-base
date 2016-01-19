@@ -2,6 +2,14 @@
 
 var Regular = require('regularjs');
 
+Regular.prototype.$once = function(event, fn) {
+    var call = function() {
+        fn && fn.apply(this, arguments);
+        this.$off(event, call);
+    }
+    this.$on(event, call);
+}
+
 var _ = {
     noop: Regular.util.noop,
     dom: Regular.dom,
