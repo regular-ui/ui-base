@@ -1,7 +1,4 @@
-var compatibility = {};
-
-compatibility.isIE = navigator.appName === 'Microsoft Internet Explorer';
-compatibility.isIE8 = navigator.appName === 'Microsoft Internet Explorer' && navigator.appVersion.indexOf('MSIE 8.0') >= 0;
+var bowser = require('bowser');
 
 if (!Object.keys) {
     Object.keys = (function() {
@@ -105,8 +102,9 @@ if (!Array.prototype.find) {
     }
 }
 
-if(compatibility.isIE8) {
-    compatibility.splitSolved = compatibility.splitSolved || (function(undef) {
+if(bowser.msie && bowser.version <= 8) {
+    var splitSolved;
+    splitSolved = splitSolved || (function(undef) {
         var nativeSplit = String.prototype.split,
             compliantExecNpcg = /()??/.exec("")[1] === undef, // NPCG: nonparticipating capturing group
             self;
@@ -188,12 +186,10 @@ if(compatibility.isIE8) {
     }());
 }
 
-compatibility.StringDate = function(value) {
+exports.StringDate = function(value) {
     value = value.split(' ');
     var date = value[0].split('-');
     var time = value[1] ? value[1].split(':') : [];
 
     return new Date(date[0], date[1] - 1, date[2], time[0] || 0, time[1] || 0, time[2] || 0);
 }
-
-module.exports = compatibility;

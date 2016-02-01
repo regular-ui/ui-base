@@ -5,5 +5,5 @@ module.exports = {
     SourceComponent: require('./src/sourceComponent.js'),
     // directive: require('./src/directive.js'),
     filter: require('./src/filter.js'),
-    compatibility: require('./src/compatibility.js')
+    polyfill: require('./src/polyfill.js')
 }
