@@ -1,11 +1,11 @@
-'use strict';
+import _ from '../util';
 
-var _ = require('./_.js');
+let directive = {};
 
-var rClassGenerator = function(rClass) {
-    exports[rClass] = function(elem, value) {
-        if(typeof value === 'object' && value.type == 'expression')
-            this.$watch(value, function(newValue, oldValue) {
+let rClassGenerator = function(rClass) {
+    directive[rClass] = function(elem, value) {
+        if(typeof value === 'object' && value.type === 'expression')
+            this.$watch(value, (newValue, oldValue) => {
                 _.dom[newValue ? 'addClass' : 'delClass'](elem, rClass);
             });
         else if(!!value || value === '')
@@ -19,9 +19,9 @@ rClassGenerator('z-chk');
 rClassGenerator('z-dis');
 rClassGenerator('z-divider');
 
-exports['r-show'] = function(elem, value) {
+directive['r-show'] = function(elem, value) {
     if(typeof value === 'object' && value.type == 'expression')
-        this.$watch(value, function(newValue, oldValue) {
+        this.$watch(value, (newValue, oldValue) => {
             if(!newValue == !oldValue)
                 return;
 
@@ -38,23 +38,21 @@ exports['r-show'] = function(elem, value) {
     }
 }
 
-exports['r-autofocus'] = function(elem, value) {
-    setTimeout(function() {
-        elem.focus();
-    }, 0);
+directive['r-autofocus'] = function(elem, value) {
+    setTimeout(() => elem.focus(), 0);
 }
 
-exports['r-attr'] = function(elem, value) {
-    var attrs = {
+directive['r-attr'] = function(elem, value) {
+    const ATTRS = {
         'INPUT': ['autocomplete', 'autofocus', 'checked', 'disabled', 'max', 'maxlength', 'min', 'multiple', 'name', 'pattern', 'placeholder', 'readonly', 'required', 'step', 'type'],
         'TEXTAREA': ['autofocus', 'disabled', 'maxlength', 'name', 'placeholder', 'readonly', 'required', 'wrap'],
         'SELECT': ['autofocus', 'disabled', 'multiple', 'name', 'required']
     }
 
-    this.$watch(value, function(newValue, oldValue) {
-        attrs[elem.tagName].forEach(function(attr) {
-            if(newValue[attr])
-                _.dom.attr(elem, attr, newValue[attr]);
-        });
+    this.$watch(value, (newValue, oldValue) => {
+        ATTRS[elem.tagName].forEach((attr) =>
+            newValue[attr] && _.dom.attr(elem, attr, newValue[attr]));
     }, true);
 }
+
+export default directive;

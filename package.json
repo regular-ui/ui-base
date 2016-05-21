@@ -1,29 +1,13 @@
 {
   "name": "regular-ui-base",
-  "description": "Base JS Files of Regular UI",
-  "version": "0.1.0",
-  "author": "Sensen <rainforest92@126.com>",
+  "description": "Base Component of Regular UI",
+  "version": "0.2.0",
+  "author": "Rainfore <rainforest92@126.com>",
   "main": "./index.js",
   "repository": "regular-ui/ui-base",
   "homepage": "http://regular-ui.github.io",
-  "bugs": {
-    "url": "http://github.com/regular-ui/ui-base/issues"
-  },
+  "bugs": {"url": "http://github.com/regular-ui/ui-base/issues"},
   "license": "MIT",
-  "keywords": [
-    "regular",
-    "ui",
-    "base"
-  ],
-  "tags": [
-    "regular",
-    "ui",
-    "base"
-  ],
-  "dependencies": {
-    "bowser": "^1.0.0",
-    "reqwest": "^2.0.5",
-    "xhr2": "^0.1.3"
-  },
-  "devDependencies": {}
+  "keywords": ["regular", "ui", "base"],
+  "tags": ["regular", "ui", "base"]
 }
