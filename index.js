@@ -1,6 +1,4 @@
 import Component from './component';
-import util from './util';
-import directive from './directive';
-import filter from './filter';
+import _ from './util';
 
-export {Component, util, directive, filter};
+export {Component, _};
