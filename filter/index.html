@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<!-- 该文件由rgui-tools自动生成 -->
+<meta charset="utf-8">
+<title>Regular UI</title>
+<meta name="author" content="Rainfore">
+<meta name="keywords" content="Regular,UI,JavaScript,Framework,MVC,MVVM">
+<meta name="description" content="Regular UI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="icon" href="http://regular-ui.github.io/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://regular-ui.github.io/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://regular-ui.github.io/css/doc.default.min.css">
+<link rel="stylesheet" href="../css/index.css">
+<!--[if lt IE9]>
+<script>
+(function() {
+    if (!
+    /*@cc_on!@*/
+    0) return;
+    var e = 'abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video'.split(', ');
+    var i= e.length;
+    while (i--)
+        document.createElement(e[i]);
+})();
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="g-top g-top-fixed">
+    <div class="g-topc">
+        <a class="u-logo" href="./"><h1>Regular UI</h1></a>
+    </div>
+</div>
+<div class="g-bd"><div class="g-bdc"><div class="g-mn">
+    <article class="m-article">
+        <h2 id="filter">Filter</h2>
+<h4 id="dateformat">dateFormat</h4>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>{now | dateFormat}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>{now | dateFormat: &#39;yyyy-MM-dd&#39;}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>: <span class="cm-variable">template</span>,
+    <span class="cm-property">data</span>: {<span class="cm-property">now</span>: <span class="cm-keyword">new</span> <span class="cm-variable">Date</span>()}
+});
+</code></pre>
+<h4 id="format">format</h4>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>{now | format: &#39;date&#39;}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>{now | format: &#39;date&#39;, &#39;yyyy-MM-dd&#39;}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>: <span class="cm-variable">template</span>,
+    <span class="cm-property">data</span>: {<span class="cm-property">now</span>: <span class="cm-keyword">new</span> <span class="cm-variable">Date</span>()}
+});
+</code></pre>
+
+    </article>
+</div>
+</div></div><div class="g-ft">
+    <footer class="m-footer">
+        <p><a href="http://regular-ui.github.io/" class="footer_logo"><img src="http://regular-ui.github.io/img/logo-v2.0-bg-48.png" /></p>
+        <p>
+            <a href="https://github.com/regular-ui/regular-ui" target="_blank">GitHub</a> |
+            <a href="https://github.com/regular-ui/regular-ui/issues" target="_blank">Issues</a> |
+            <a href="https://github.com/regular-ui/regular-ui/releases" target="_blank">ChangeLog</a> |
+            <a href="https://github.com/regular-ui/regular-ui/blob/master/CONTRIBUTING.md" target="_blank">Contributing</a>
+        </p>
+        <p>Licensed under <a href="https://github.com/regular-ui/regular-ui/blob/master/LICENSE" target="_blank">MIT license</a>.</p>
+    </footer>
+</div>
+<script src="http://regular-ui.github.io/vendor/regular.min.js"></script>
+<script src="../js/index.js"></script>
+<script>
+var $$ = function(selector){return document.querySelectorAll(selector)};
+</script>
+<script>
+"use strict";
+
+var index = 0;
+(function (index) {
+    var template = "<p>{now | dateFormat}</p>\n<p>{now | dateFormat: 'yyyy-MM-dd'}</p>";
+    var component = new RGUI.Component({
+        template: template,
+        data: { now: new Date() }
+    });
+    component.$inject($$(".m-example")[index]);
+})(index++);
+(function (index) {
+    var template = "<p>{now | format: 'date'}</p>\n<p>{now | format: 'date', 'yyyy-MM-dd'}</p>";
+    var component = new RGUI.Component({
+        template: template,
+        data: { now: new Date() }
+    });
+    component.$inject($$(".m-example")[index]);
+})(index++);
+</script>
+</body>
+</html>
