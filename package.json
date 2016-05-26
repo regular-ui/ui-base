@@ -1,6 +1,6 @@
 {
   "name": "regular-ui-base",
-  "description": "Base JS Files of Regular UI",
+  "description": "Regular UI - Base Component",
   "version": "0.1.0",
   "author": "Sensen <rainforest92@126.com>",
   "main": "./index.js",

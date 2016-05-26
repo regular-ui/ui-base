@@ -16,6 +16,7 @@ var rClassGenerator = function(rClass) {
 rClassGenerator('z-crt');
 rClassGenerator('z-sel');
 rClassGenerator('z-chk');
+rClassGenerator('z-act');
 rClassGenerator('z-dis');
 rClassGenerator('z-divider');
 
