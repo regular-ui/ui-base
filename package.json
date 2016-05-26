@@ -1,5 +1,5 @@
 {
-  "name": "regular-ui-base",
+  "name": "rgui-base",
   "description": "Regular UI - Base Component",
   "version": "0.2.0",
   "author": "Rainfore <rainforest92@126.com>",
@@ -8,6 +8,6 @@
   "homepage": "http://regular-ui.github.io",
   "bugs": {"url": "http://github.com/regular-ui/ui-base/issues"},
   "license": "MIT",
-  "keywords": ["regular", "ui", "base"],
-  "tags": ["regular", "ui", "base"]
+  "keywords": ["regular", "ui", "rgui", "base"],
+  "tags": ["regular", "ui", "rgui", "base"]
 }
