@@ -39,7 +39,12 @@ directive['r-show'] = function(elem, value) {
 }
 
 directive['r-autofocus'] = function(elem, value) {
-    setTimeout(() => elem.focus(), 0);
+    if(typeof value === 'object' && value.type == 'expression')
+        this.$watch(value, (newValue, oldValue) => {
+            newValue && setTimeout(() => elem.focus(), 0);
+        });
+    else if(!!value || value === '')
+        setTimeout(() => elem.focus(), 0);
 }
 
 directive['r-attr'] = function(elem, value) {
