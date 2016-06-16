@@ -1,6 +1,6 @@
-## Filter
+# Filter
 
-#### dateFormat
+### dateFormat
 
 <div class="m-example"></div>
 
@@ -16,7 +16,7 @@ let component = new RGUI.Component({
 });
 ```
 
-#### format
+### format
 
 <div class="m-example"></div>
 

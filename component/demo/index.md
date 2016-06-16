@@ -1,6 +1,6 @@
-## Component
+# Component
 
-#### 简单示例
+### 简单示例
 
 <div class="m-example"></div>
 

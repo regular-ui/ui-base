@@ -1,6 +1,6 @@
-## Directive
+# Directive
 
-#### z-crt, z-sel
+### z-crt, z-sel
 
 <div class="m-example"></div>
 
@@ -12,7 +12,7 @@
 </ul>
 ```
 
-#### z-dis, z-chk
+### z-dis, z-chk
 
 <div class="m-example"></div>
 
@@ -21,11 +21,11 @@
 <a class="u-btn" z-dis={!enabled}>Button</a>
 ```
 
-#### r-show
+### r-show
 
 和`r-hide`相反，主要为了避免`r-hide`在性能较差的情况下从显示到隐藏会闪一下的问题，但`r-show`目前只支持`display: block`。
 
-#### r-autofocus
+### r-autofocus
 
 主要为了解决Regular中使用autofocus在某些情况下不生效的问题。
 
