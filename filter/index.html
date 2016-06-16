@@ -27,15 +27,16 @@
 <![endif]-->
 </head>
 <body>
-<div class="g-top g-top-fixed">
+<div class="g-top">
     <div class="g-topc">
-        <a class="u-logo" href="./"><h1>Regular UI</h1></a>
+        <a class="u-logo" href="./">Regular UI</a>
     </div>
 </div>
-<div class="g-bd"><div class="g-bdc"><div class="g-mn">
+<div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
     <article class="m-article">
-        <h2 id="filter">Filter</h2>
-<h4 id="dateformat">dateFormat</h4>
+        <h1><small> </small></h1>
+        <h1 id="filter">Filter</h1>
+<h3 id="dateformat">dateFormat</h3>
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>{now | dateFormat}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
@@ -46,7 +47,7 @@
     <span class="cm-property">data</span>: {<span class="cm-property">now</span>: <span class="cm-keyword">new</span> <span class="cm-variable">Date</span>()}
 });
 </code></pre>
-<h4 id="format">format</h4>
+<h3 id="format">format</h3>
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>{now | format: &#39;date&#39;}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
@@ -58,6 +59,7 @@
 });
 </code></pre>
 
+        
     </article>
 </div>
 </div></div><div class="g-ft">
@@ -76,6 +78,9 @@
 <script src="../js/index.js"></script>
 <script>
 var $$ = function(selector){return document.querySelectorAll(selector)};
+$$('.m-article > h2, .m-article > h3').forEach(function($heading) {
+    $heading.innerHTML = '<a href="#' + $heading.id + '">' + $heading.innerText + '</a>';
+});
 </script>
 <script>
 "use strict";
@@ -87,7 +92,7 @@ var index = 0;
         template: template,
         data: { now: new Date() }
     });
-    component.$inject($$(".m-example")[index]);
+    component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
     var template = "<p>{now | format: 'date'}</p>\n<p>{now | format: 'date', 'yyyy-MM-dd'}</p>";
@@ -95,7 +100,7 @@ var index = 0;
         template: template,
         data: { now: new Date() }
     });
-    component.$inject($$(".m-example")[index]);
+    component && component.$inject($$(".m-example")[index]);
 })(index++);
 </script>
 </body>

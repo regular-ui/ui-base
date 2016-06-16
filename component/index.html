@@ -27,15 +27,16 @@
 <![endif]-->
 </head>
 <body>
-<div class="g-top g-top-fixed">
+<div class="g-top">
     <div class="g-topc">
-        <a class="u-logo" href="./"><h1>Regular UI</h1></a>
+        <a class="u-logo" href="./">Regular UI</a>
     </div>
 </div>
-<div class="g-bd"><div class="g-bdc"><div class="g-mn">
+<div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
     <article class="m-article">
-        <h2 id="component">Component</h2>
-<h4 id="-">简单示例</h4>
+        <h1><small> </small></h1>
+        <h1 id="component">Component</h1>
+<h3 id="简单示例">简单示例</h3>
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-input&quot;</span> <span class="cm-attribute">r-model</span>=<span class="cm-attribute">{message}</span> <span class="cm-tagcm-bracketcm-error">/&gt;</span>
@@ -43,9 +44,54 @@
 </code></pre>
 <pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
     <span class="cm-property">template</span>: <span class="cm-variable">template</span>,
-    <span class="cm-property">data</span>: {<span class="cm-property">message</span>: <span class="cm-string">&#39;Hello Regular UI&#39;</span>}
+    <span class="cm-property">data</span>: {<span class="cm-property">message</span>: <span class="cm-string">&#39;Hello World&#39;</span>}
 });
 </code></pre>
+
+        <h2 id="API">API</h2>
+
+<h3 id="Class">Class</h3>
+<h4>Component</h4>
+<p>继承自<strong>Regular</strong>。</p>
+<p></p>
+<div id="j-class"></div>
+
+<h3 id="Options">Options</h3>
+<h4>new Component()</h4>
+<table>
+    <thead>
+        <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
+    </thead>
+    <tbody>
+        
+            
+            <tr><td class="f-wsn"><code>data.readonly</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outer  =&gt; inner</td><td>是否只读</td></tr>
+            
+            <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outer  =&gt; inner</td><td>是否禁用</td></tr>
+            
+            <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outer  =&gt; inner</td><td>是否显示</td></tr>
+            
+            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>补充class</td></tr>
+            
+        
+    </tbody>
+</table>
+<div id="j-options"></div>
+
+
+<div id="j-methods"></div>
+
+
+<div id="j-staticMethods"></div>
+
+
+<div id="j-inheritedMethods"></div>
+
+
+<div id="j-events"></div>
+
+
+<div id="j-inheritedEvents"></div>
 
     </article>
 </div>
@@ -65,6 +111,9 @@
 <script src="../js/index.js"></script>
 <script>
 var $$ = function(selector){return document.querySelectorAll(selector)};
+$$('.m-article > h2, .m-article > h3').forEach(function($heading) {
+    $heading.innerHTML = '<a href="#' + $heading.id + '">' + $heading.innerText + '</a>';
+});
 </script>
 <script>
 "use strict";
@@ -74,9 +123,9 @@ var index = 0;
     var template = "<input class=\"u-input\" r-model={message} />\n<span>{message}</span>";
     var component = new RGUI.Component({
         template: template,
-        data: { message: 'Hello Regular UI' }
+        data: { message: 'Hello World' }
     });
-    component.$inject($$(".m-example")[index]);
+    component && component.$inject($$(".m-example")[index]);
 })(index++);
 </script>
 </body>
