@@ -19,8 +19,7 @@ let Component = Regular.extend({
             readonly: false,
             disabled: false,
             visible: true,
-            'class': '',
-            console: typeof console === 'undefined' ? undefined : console
+            'class': ''
         }, this.data);
         this.supr();
     }
