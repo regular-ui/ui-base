@@ -1,5 +1,3 @@
-# Filter
-
 ### dateFormat
 
 <div class="m-example"></div>

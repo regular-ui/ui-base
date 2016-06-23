@@ -1,6 +1,5 @@
-# Component
-
-### 简单示例
+## 示例
+### 基本形式
 
 <div class="m-example"></div>
 
