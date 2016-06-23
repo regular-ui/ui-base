@@ -10,7 +10,7 @@
 
 ```javascript
 let component = new RGUI.Component({
-    template: template,
+    template,
     data: {message: 'Hello World'}
 });
 ```

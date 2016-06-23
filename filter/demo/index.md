@@ -9,7 +9,7 @@
 
 ```javascript
 let component = new RGUI.Component({
-    template: template,
+    template,
     data: {now: new Date()}
 });
 ```
@@ -25,7 +25,7 @@ let component = new RGUI.Component({
 
 ```javascript
 let component = new RGUI.Component({
-    template: template,
+    template,
     data: {now: new Date()}
 });
 ```
