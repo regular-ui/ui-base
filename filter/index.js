@@ -16,12 +16,12 @@ filter.dateFormat = (() => {
     }
     let trunk = new RegExp(Object.keys(MAPS).join('|'), 'g');
 
-    return (value, format = 'yyyy-MM-dd HH:mm') => {
+    return function(value, format = 'yyyy-MM-dd HH:mm') {
         if(!value)
             return '';
         value = new Date(value);
 
-        return format.replace(trunk, function(capture) {
+        return format.replace(trunk, (capture) => {
             return MAPS[capture] ? MAPS[capture](value) : '';
         });
     }

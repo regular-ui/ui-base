@@ -1,0 +1,9 @@
+sudo: false
+language: node_js
+node_js:
+  - 4
+install:
+  - npm install -g rgui-tools
+  - npm install
+script:
+  - rgui-tools test -s -r mocha

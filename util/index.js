@@ -1,8 +1,24 @@
-import Regular from 'regularjs';
+import {dom} from 'regularjs';
 
-let util = {};
+let _ = {};
 
-util.noop = Regular.util.noop;
-util.dom = Regular.dom;
+_.createBoolDirective = function(func) {
+    return function(elem, value) {
+        if(typeof value === 'object' && value.type === 'expression')
+            this.$watch(value, (newValue, oldValue) => {
+                if(!newValue === !oldValue)
+                    return;
+                func.call(this, elem, newValue);
+            });
+        else if(!!value || value === '')
+            func.call(this, elem, true);
+    }
+}
 
-export default util;
+_.createBoolClassDirective = function(boolClass) {
+    return _.createBoolDirective((elem, value) => {
+        dom[value ? 'addClass' : 'delClass'](elem, boolClass);
+    });
+}
+
+export default _;
