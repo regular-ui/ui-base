@@ -6,4 +6,4 @@ install:
   - npm install -g rgui-tools
   - npm install
 script:
-  - rgui-tools test -s -r mocha
+  - rgui-tools test -O
