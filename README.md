@@ -12,7 +12,7 @@ Regular UI - Base Component, utils, directives and filters
 [npm-url]: http://npmjs.org/package/rgui-base
 [travis-img]: https://img.shields.io/travis/regular-ui/ui-base.svg?style=flat-square
 [travis-url]: https://travis-ci.org/regular-ui/ui-base
-[coveralls-img]: https://img.shields.io/coveralls/regular-ui/ui-base.svg?style=flat-square
+[coveralls-img]: https://img.shields.io/coveralls/regular-ui/ui-base/feature%2Fv0.2.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/regular-ui/ui-base
 [david-img]: http://img.shields.io/david/regular-ui/ui-base.svg?style=flat-square
 [david-url]: https://david-dm.org/regular-ui/ui-base
