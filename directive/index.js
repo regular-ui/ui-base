@@ -1,6 +1,6 @@
 import _ from '../util';
 
-let directive = {};
+const directive = {};
 
 directive['z-crt'] = _.createBoolClassDirective('z-crt');
 directive['z-sel'] = _.createBoolClassDirective('z-sel');

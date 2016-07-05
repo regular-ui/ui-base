@@ -1,4 +1,4 @@
 import Component from './component';
 import _ from './util';
 
-export {Component, _};
+export { Component, _ };

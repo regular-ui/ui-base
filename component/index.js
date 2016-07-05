@@ -10,7 +10,7 @@ import directive from '../directive';
  * @param {boolean=true}            options.data.visible             => 是否显示
  * @param {string=''}               options.data.class               => 补充class
  */
-let Component = Regular.extend({
+const Component = Regular.extend({
     /**
      * @protected
      */
@@ -19,10 +19,10 @@ let Component = Regular.extend({
             readonly: false,
             disabled: false,
             visible: true,
-            'class': ''
+            'class': '',
         }, this.data);
         this.supr();
-    }
+    },
 })
 .filter(filter)
 .directive(directive);
