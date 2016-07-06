@@ -2,7 +2,7 @@ import filter from '../';
 
 describe('filter', () => {
     describe('#dateFormat', () => {
-        let date = new Date(2016, 6, 1, 18, 32, 40, 123);
+        const date = new Date(2016, 6, 1, 18, 32, 40, 123);
 
         it('should output correct Date string with the default format.', () => {
             expect(filter.dateFormat(date)).to.be('2016-07-01 18:32');

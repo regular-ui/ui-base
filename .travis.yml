@@ -11,4 +11,4 @@ install:
   - npm install
 script:
   - rgui-tools test -O
-  - rgui-tools lint
+  - rgui-tools lint -O

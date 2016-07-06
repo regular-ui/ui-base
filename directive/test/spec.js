@@ -3,8 +3,8 @@ import Component from '../../component';
 describe('directive', () => {
     describe('#boolClassDirective', () => {
         it('should add/remove class when `value` changed.', () => {
-            let component = new Component({
-                template: `<div z-crt={value} ref="element"></div>`
+            const component = new Component({
+                template: `<div z-crt={value} ref="element"></div>`,
             });
 
             component.data.value = 1;
@@ -21,15 +21,15 @@ describe('directive', () => {
         });
 
         it('should add class when value is always true.', () => {
-            let component = new Component({
-                template: `<div z-sel={true} ref="element"></div>`
+            const component = new Component({
+                template: `<div z-sel={true} ref="element"></div>`,
             });
             expect(component.$refs.element.className).to.be('z-sel');
         });
 
         it('should add class when using HTML5 style.', () => {
-            let component = new Component({
-                template: `<div z-dis ref="element"></div>`
+            const component = new Component({
+                template: `<div z-dis ref="element"></div>`,
             });
             expect(component.$refs.element.className).to.be('z-dis');
         });
@@ -37,8 +37,8 @@ describe('directive', () => {
 
     describe('#r-show', () => {
         it('should show/hide when `value` changed.', () => {
-            let component = new Component({
-                template: `<div r-show={value} ref="element"></div>`
+            const component = new Component({
+                template: `<div r-show={value} ref="element"></div>`,
             });
 
             component.data.value = true;
@@ -52,11 +52,11 @@ describe('directive', () => {
     });
 
     describe('#r-autofocus', () => {
-        let component = new Component({
-            template: `<input r-autofocus ref="element" />`
+        const component = new Component({
+            template: `<input r-autofocus ref="element" />`,
         }).$inject(document.body);
 
-        it('should autofocus when value is true.', function() {
+        it('should autofocus when value is true.', function () {
             this.timeout(10);
             expect(component.$refs.element).to.be(document.activeElement);
             component.destroy();

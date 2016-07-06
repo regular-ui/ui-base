@@ -18,7 +18,7 @@ filter.dateFormat = (() => {
     const trunk = new RegExp(Object.keys(MAPS).join('|'), 'g');
 
     return function (value, format = 'yyyy-MM-dd HH:mm') {
-        if(!value)
+        if (!value)
             return '';
         value = new Date(value);
 
