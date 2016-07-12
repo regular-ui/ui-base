@@ -8,16 +8,16 @@ Regular UI - Base Component, utils, directives and filters
 [![Dependencies][david-img]][david-url]
 [![NPM Download][download-img]][download-url]
 
-[npm-img]: http://img.shields.io/npm/v/rgui-base.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/rgui-base
+[npm-img]: http://img.shields.io/npm/v/rgui-ui-base.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/rgui-ui-base
 [travis-img]: https://img.shields.io/travis/regular-ui/ui-base.svg?style=flat-square
 [travis-url]: https://travis-ci.org/regular-ui/ui-base
 [coveralls-img]: https://img.shields.io/coveralls/regular-ui/ui-base/next.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/regular-ui/ui-base
 [david-img]: http://img.shields.io/david/regular-ui/ui-base.svg?style=flat-square
 [david-url]: https://david-dm.org/regular-ui/ui-base
-[download-img]: https://img.shields.io/npm/dm/rgui-base.svg?style=flat-square
-[download-url]: https://npmjs.org/package/rgui-base
+[download-img]: https://img.shields.io/npm/dm/rgui-ui-base.svg?style=flat-square
+[download-url]: https://npmjs.org/package/rgui-ui-base
 
 ## Component（组件基类）
 
