@@ -22,12 +22,14 @@ const Component = Regular.extend({
             'class': '',
         }, this.data);
         this.supr();
-        this.watch();
     },
     /**
      * @protected
      */
-    watch() {/* for override */},
+    watch() {
+        // just for override
+        // recommand put all `this.$watch` here.
+    },
 }).filter(filter).directive(directive);
 
 export default Component;
