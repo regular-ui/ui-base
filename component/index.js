@@ -28,7 +28,7 @@ const Component = Regular.extend({
      */
     watch() {
         // just for override
-        // recommand put all `this.$watch` here.
+        // recommand putting all `this.$watch` here.
     },
 }).filter(filter).directive(directive);
 
