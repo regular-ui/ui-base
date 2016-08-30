@@ -44,7 +44,9 @@
 </code></pre>
 <pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
     <span class="cm-property">template</span>,
-    <span class="cm-property">data</span>: {<span class="cm-property">message</span>: <span class="cm-string">&#39;Hello World&#39;</span>}
+    <span class="cm-property">data</span>: {
+        <span class="cm-property">message</span>: <span class="cm-string">&#39;Hello World&#39;</span>,
+    }
 });
 </code></pre>
 
@@ -119,7 +121,9 @@ var index = 0;
     var template = "<input class=\"u-input\" r-model={message} />\n<span>{message}</span>";
     var component = new RGUI.Component({
         template: template,
-        data: { message: 'Hello World' }
+        data: {
+            message: 'Hello World'
+        }
     });
     component && component.$inject($$(".m-example")[index]);
 })(index++);
