@@ -1,6 +1,7 @@
 import Regular from 'regularjs';
 import filter from '../filter';
 import directive from '../directive';
+import _ from '../util';
 
 /**
  * @class Component
@@ -15,13 +16,22 @@ const Component = Regular.extend({
      * @protected
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             readonly: false,
             disabled: false,
             visible: true,
             'class': '',
-        }, this.data);
+        });
         this.supr();
+    },
+    /**
+     * @method defaults(...options) 设置`this.data`的默认值
+     * @protected
+     * @param  {object} ...options 若干默认选项。从左到右依次进行，不会覆盖已经设置过的值。
+     * @return {object} data 返回`this.data`
+     */
+    defaults(...options) {
+        return _.defaults(this.data, ...options);
     },
     /**
      * @protected
