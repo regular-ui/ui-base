@@ -33,6 +33,13 @@ describe('directive', () => {
             });
             expect(component.$refs.element.className).to.be('z-dis');
         });
+
+        it('should add class when value is always false.', () => {
+            const component = new Component({
+                template: `<div z-chk={false} ref="element"></div>`,
+            });
+            expect(component.$refs.element.className).to.be('');
+        });
     });
 
     describe('#r-show', () => {

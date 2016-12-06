@@ -1,3 +1,4 @@
+## 示例
 ### z-crt, z-sel, z-act
 
 <div class="m-example"></div>
@@ -15,7 +16,7 @@
 <div class="m-example"></div>
 
 ```xml
-<input type="checkbox" r-model={enabled}>
+<input type="checkbox" r-model={enabled} />
 <a class="u-btn" z-dis={!enabled}>Button</a>
 ```
 
@@ -30,5 +31,5 @@
 <div class="m-example"></div>
 
 ```xml
-<input class="u-input" r-autofocus>
+<input class="u-input" r-autofocus />
 ```

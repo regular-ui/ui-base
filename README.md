@@ -23,8 +23,6 @@ Regular UI - Base Component, utils, directives and filters
 
 - 基础示例+进阶案例+API: https://regular-ui.github.io/ui-base/component/index.html
 
-## Util（常用工具）
-
 ## Directive（常用指令）
 
 - 基础示例+进阶案例+API: https://regular-ui.github.io/ui-base/directive/index.html
@@ -32,6 +30,10 @@ Regular UI - Base Component, utils, directives and filters
 ## Filter（常用过滤器）
 
 - 基础示例+进阶案例+API: https://regular-ui.github.io/ui-base/filter/index.html
+
+## Util（常用工具）
+
+- 基础示例+进阶案例+API: https://regular-ui.github.io/ui-base/util/index.html
 
 ## Copyright and License
 

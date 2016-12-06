@@ -1,3 +1,4 @@
+## 示例
 ### dateFormat
 
 <div class="m-example"></div>
@@ -10,7 +11,7 @@
 ```javascript
 let component = new RGUI.Component({
     template,
-    data: {now: new Date()}
+    data: { now: new Date() },
 });
 ```
 
@@ -26,6 +27,6 @@ let component = new RGUI.Component({
 ```javascript
 let component = new RGUI.Component({
     template,
-    data: {now: new Date()}
+    data: { now: new Date() },
 });
 ```
