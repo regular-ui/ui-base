@@ -35,7 +35,8 @@
 <div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
     <article class="m-article">
         <h1>常用指令<small> Directive</small></h1>
-        <h3 id="z-crt,-z-sel,-z-act">z-crt, z-sel, z-act</h3>
+        <h2 id="示例">示例</h2>
+<h3 id="z-crt,-z-sel,-z-act">z-crt, z-sel, z-act</h3>
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;m-toolbar&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
@@ -47,7 +48,7 @@
 <h3 id="z-dis,-z-chk">z-dis, z-chk</h3>
 <div class="m-example"></div>
 
-<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">&quot;checkbox&quot;</span> <span class="cm-attribute">r-model</span>=<span class="cm-attribute">{enabled}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">&quot;checkbox&quot;</span> <span class="cm-attribute">r-model</span>=<span class="cm-attribute">{enabled}</span> <span class="cm-tagcm-bracketcm-error">/&gt;</span>
 <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn&quot;</span> <span class="cm-attribute">z-dis</span>=<span class="cm-attribute">{!enabled}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>Button<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
 <h3 id="r-show">r-show</h3>
@@ -56,7 +57,7 @@
 <p>主要为了解决Regular中使用autofocus在某些情况下不生效的问题。</p>
 <div class="m-example"></div>
 
-<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-input&quot;</span> <span class="cm-attribute">r-autofocus</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-input&quot;</span> <span class="cm-attribute">r-autofocus</span> <span class="cm-tagcm-bracketcm-error">/&gt;</span>
 </code></pre>
 
         
@@ -90,14 +91,14 @@ var index = 0;
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<input type=\"checkbox\" r-model={enabled}>\n<a class=\"u-btn\" z-dis={!enabled}>Button</a>";
+    var template = "<input type=\"checkbox\" r-model={enabled} />\n<a class=\"u-btn\" z-dis={!enabled}>Button</a>";
     var component = new RGUI.Component({
         template: template
     });
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<input class=\"u-input\" r-autofocus>";
+    var template = "<input class=\"u-input\" r-autofocus />";
     var component = new RGUI.Component({
         template: template
     });
