@@ -1,4 +1,4 @@
-import Component from './component';
-import _ from './util';
+import Component from './src/component';
+import _ from './src/util';
 
 export { Component, _ };

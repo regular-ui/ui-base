@@ -5,7 +5,7 @@ import _ from '../util';
 
 /**
  * @class Component
- * @extend Regular
+ * @extends Regular
  * @param {boolean=false}           options.data.readonly            => 是否只读
  * @param {boolean=false}           options.data.disabled            => 是否禁用
  * @param {boolean=true}            options.data.visible             => 是否显示

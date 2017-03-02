@@ -1,7 +1,7 @@
 {
   "name": "rgui-ui-base",
   "description": "Regular UI - Base Component, utils, directives and filters",
-  "version": "0.2.0-alpha.6",
+  "version": "0.2.0",
   "author": "Rainfore <rainforest92@126.com>",
   "main": "./index.js",
   "repository": "regular-ui/ui-base",
